@@ -1624,7 +1624,7 @@ setState(state)*/
             wrap();
           }}
         >
-          Change Ingredients.. soon...
+          Change Ingredients
         </Button>
         </span>
       </Tooltip>
