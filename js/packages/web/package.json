@@ -48,7 +48,9 @@
   },
   "scripts": {
     "prestart": "npm-link-shared ../common/node_modules/ . react",
-    "start": "next dev",
+"start": "yarn serve -d out",
+    
+"dev": "next dev",
     "build": "next build",
     "export": "next export -o ../../build/web",
     "start:prod": "next start",
