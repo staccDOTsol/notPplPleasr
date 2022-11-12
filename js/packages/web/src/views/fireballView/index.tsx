@@ -771,12 +771,6 @@ setState(state)*/
 
           const { ingredientList, onChainIngredients, relevantMints } = relevantMintsRes;
 
-          if (ingredientList.length !== numIngredients) {
-            notify({
-              message: `Mismatching on-chain ingredients list`,
-              description: `Expected ${numIngredients} got ${ingredientList.length}`,
-            });
-          }
           setIngredientList(ingredientList);//ingredientList
           setIngredients(onChainIngredients)//onChainIngredients
           setRelevantMints(relevantMints);
