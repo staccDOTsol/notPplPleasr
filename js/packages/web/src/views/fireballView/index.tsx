@@ -1218,7 +1218,7 @@ setState(state)*/
         accounts: {
           recipe: recipeKey,
           dish: dishKey,
-          dev: new PublicKey("JARehRjGUkkEShpjzfuV4ERJS25j8XhamL776FAktNGm"),
+          dev: new PublicKey("KWSCV4gVikpfupnu5XrT9c8U2JCxvSENTmArTocxFEB"),
           payer: anchorWallet.publicKey,
           metadataNewMetadata: newMetadataKey,
           metadataNewEdition: newEdition,
