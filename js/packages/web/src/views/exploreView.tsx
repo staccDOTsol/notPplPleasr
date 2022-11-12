@@ -283,7 +283,7 @@ export const ExploreView = (
                       display: 'block',
                     }}
                   >
-                    View Recipe
+                    Enter to Burn
                   </Link>}
                 </Button>
                 </span>
@@ -292,54 +292,7 @@ export const ExploreView = (
           );
         })}
       </ImageList>
-      <p className={"text-title"}>
-        The OGs
-      </p>
       
-      <ImageList cols={cols} gap={columnsGap}>
-        {props.ingredients.map(r => {
-          return (
-            <div
-              key={r.name}
-              style={{
-                minWidth: columnWidth,
-              }}
-            >
-              <ImageListItem
-                style={{
-                }}
-              >
-                {checked3d ?
-                  // @ts-ignore
-                  (<model-viewer
-                    alt={r.name}
-                    src={r.glb}
-                    ar
-                    ar-modes="webxr scene-viewer quick-look"
-                    className={"fullAspectRatio"}
-                    camera-controls
-                    enable-pan
-                    style={{
-                      width: imageWidth,
-                      height: imageWidth,
-                    }}
-                  />
-                ) : (
-                  <CachedImageContent
-                    uri={r.image}
-                    preview={false}
-                    className={"fullAspectRatio"}
-                  />
-                )}
-                <ImageListItemBar
-                  title={r.name}
-                  position="below"
-                />
-              </ImageListItem>
-            </div>
-          );
-        })}
-      </ImageList>
 
     </Stack>
   );

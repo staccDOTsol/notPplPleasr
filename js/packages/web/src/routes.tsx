@@ -193,7 +193,7 @@ export function Routes() {
       image: "https://arweave.net/HB7my22UI6cnwHLI9q6LuHgjgp9dvlNzW53uhvHVfxU?ext=gif",
       glb: "https://arweave.net/HB7my22UI6cnwHLI9q6LuHgjgp9dvlNzW53uhvHVfxU?ext=gif",
       name: "KWSCapital",
-      mint: new PublicKey("B1FNCtYX4sfDWXQEfkP6GczdDrDVNFz5C5YZLT83mSZy"),
+      mint: new PublicKey("5ZkJjZN1b9AqxGQg4j4gHUYE2W6RmZbbNj3JXjco6GgT"),
     },
   ];
 
@@ -298,12 +298,12 @@ export function Routes() {
             <Route path="/KWSCapital" component={
               () => (
                 <FireballView
-                  recipeKey={new PublicKey("BB7tgSnG2Bi1nCfeTBVUfTEwWg4rvDE2FXriYLHnJiHg")}
+                  recipeKey={new PublicKey("Aoafu6CgCUaqGXxZzQYmPc8CDNvV4NghyZ3BHtJJHVZ6")}
                   recipeYields={KWSCapitalYields}
                   ingredients={{
                     ...ingredientSubset(['Burn # 1','Burn # 2','Burn # 3',
                     'Burn # 4','Burn # 5','Burn # 6','Burn # 7',
-                    'Burn # 8','Burn # 9','Burn # 10'  ]),
+                    'Burn # 8','Burn # 9','Burn # 10']),
                   }}
                 />
               )

@@ -50,6 +50,7 @@ const BuyButton = () => {
           >
             MARKETPLACES
           </h5>
+         
           <Button
             className="modal-button-default"
             style={{
@@ -57,20 +58,7 @@ const BuyButton = () => {
             }}
           >
             <a
-              href="https://solanart.io/collections/thecollectoooooor"
-              target="_blank"
-            >
-              Solanart
-            </a>
-          </Button>
-          <Button
-            className="modal-button-default"
-            style={{
-              width: "100%"
-            }}
-          >
-            <a
-              href="https://magiceden.io/marketplace/collectoooooor"
+              href="https://magiceden.io/marketplace/naked_meerkats_beach_club"
               target="_blank"
             >
               Magic Eden
@@ -175,22 +163,7 @@ export const AppBar = () => {
           <MetaplexMenu />
         </div>
         <div className="app-right" style={{ marginRight: 0 }}>
-          {(
-            <Button
-              className="wallet-key"
-              style={{
-                width: "100%",
-                marginRight: "10px",
-              }}
-            >
-              <a
-                href="https://www.cyber.xyz/thecollectoooooor"
-                target="_blank"
-              >
-                Cyber
-              </a>
-            </Button>
-          )}
+         
           {<BuyButton />}
           {!connected && (
             <ConnectButton style={{ height: 48 }} allowWalletChange />
