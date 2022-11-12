@@ -14,7 +14,7 @@
     "bootstrap": "lerna link && lerna bootstrap",
     "build": "lerna run build",
     "build-web": "lerna run build --stream --scope @oyster/common --scope web",
-    "start": "cross-env CI=true lerna run start --scope @oyster/common --stream --parallel --scope web",
+    "start": "yarn serve -d out",
     "lint": "prettier -c 'packages/*/{src,test}/**/*.ts' && npm run lint:eslint",
     "lint:eslint": "eslint 'packages/*/{src,test}/**/*.ts'",
     "lint:fix": "prettier --write 'packages/*/{src,test}/**/*.{ts,tsx}' && eslint --fix 'packages/*/{src,test}/**/*.ts'",
@@ -58,7 +58,8 @@
     "next": "^11.0.1",
     "node-fetch": "2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "serve": "^14.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",

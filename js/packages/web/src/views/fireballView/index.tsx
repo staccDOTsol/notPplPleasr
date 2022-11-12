@@ -1511,7 +1511,7 @@ setState(state)*/
             <div>
             {
            
-            //craftButtonC(recipe, topDisabled || !recipeYieldAvailable)
+            craftButtonC(recipe, topDisabled || !recipeYieldAvailable)
           }
             </div>
           </Stack>
