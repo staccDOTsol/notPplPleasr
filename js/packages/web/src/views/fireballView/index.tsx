@@ -437,7 +437,7 @@ const getRelevantTokenAccounts = async (
      
       return {
         ...r,
-        uri,
+        uri: uri.image,
         ingredients: mints[mint].map(m => m.ingredient),
         tokenAccount: relevant[idx].tokenAccount,
       };
@@ -448,7 +448,7 @@ const getRelevantTokenAccounts = async (
       }
       return {
         ...r,
-        uri,
+        uri: uri.image,
         ingredients: [parent.ingredient],  // lookup by parent edition
         tokenAccount: relevant[idx].tokenAccount,
         parent: {
@@ -1766,7 +1766,7 @@ setState(state)*/
                   }
                   position="below"
                 />
-                {state && state.traitOptions.map((t: string, i: number ) => 
+                {false && state.traitOptions.map((t: string, i: number ) => 
                                           <div style={{
                                             overflow:"wrap",
                                             marginTop: "6px", 
