@@ -298,7 +298,7 @@ export function Routes() {
             <Route path="/KWSCapital" component={
               () => (
                 <FireballView
-                  recipeKey={new PublicKey("Aoafu6CgCUaqGXxZzQYmPc8CDNvV4NghyZ3BHtJJHVZ6")}
+                  recipeKey={new PublicKey("DGaKKznHHuuYYGan8etBTgKm4u6fw9nHZuK5cM1eHqN6")}
                   recipeYields={KWSCapitalYields}
                   ingredients={{
                     ...ingredientSubset(['Burn # 1','Burn # 2','Burn # 3',
