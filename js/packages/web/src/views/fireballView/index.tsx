@@ -168,6 +168,7 @@ type OnChainIngredient = RelevantMint;
 
 type WalletIngredient = RelevantMint & {
   tokenAccount : PublicKey,
+  uri: string,
   parent ?: {
     edition : PublicKey,
     masterMint : PublicKey,
@@ -429,10 +430,14 @@ const getRelevantTokenAccounts = async (
     const mint = r.mint.toBase58();
     const editionParentKey = relevant[idx].editionParentKey;
     console.log('TA for ', mint, relevant[idx].tokenAccount.toBase58());
+    const metadatas = (await programs.metadata.Metadata.findByMint (connection, new PublicKey(mint)));
+    let uri = await(await fetch(metadatas.data.data.uri)).json()
+   
     if (mints.hasOwnProperty(mint)) {
      
       return {
         ...r,
+        uri,
         ingredients: mints[mint].map(m => m.ingredient),
         tokenAccount: relevant[idx].tokenAccount,
       };
@@ -443,6 +448,7 @@ const getRelevantTokenAccounts = async (
       }
       return {
         ...r,
+        uri,
         ingredients: [parent.ingredient],  // lookup by parent edition
         tokenAccount: relevant[idx].tokenAccount,
         parent: {
@@ -1680,7 +1686,7 @@ setState(state)*/
             >
               <ImageListItem>
                 <CachedImageContent
-                  uri={ingredients[ingredient]}
+                  uri={relevantMints[idx] ? relevantMints[idx].uri : ingredients[ingredient]}
                   style={{
                     ...imgBorderStyle,
                     padding: inBatch ? 10 : imgBorderStyle.padding,
