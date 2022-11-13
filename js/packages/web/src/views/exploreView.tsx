@@ -170,15 +170,9 @@ export const ExploreView = (
       }}
     >
       <p className={"text-title"}>
-        The Recipes
+      The Kats of Wall Street Naked Meerkat Exchange
       </p>
-      <p className={"text-subtitle"}>
-        Recipes let you mix and match your current NFTs to craft new, rarer items.
-        <PurpleSwitch
-          checked={recipeChecked3d}
-          onChange={e => setRecipechecked3d(e.target.checked)}
-        />
-      </p>
+
       <Box style={{ height: '20px' }} />
       <ImageList cols={cols} gap={columnsGap}>
         {props.recipeYields.map((r, idx) => {

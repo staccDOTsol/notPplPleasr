@@ -268,7 +268,7 @@ export const remainingText = (rem) => {
   if (rem.remaining[0] === 0) {
     return 'SOLD OUT';
   }
-  return `${rem.remaining[0]}/${rem.remaining[1]} remaining`;
+  return `${rem.remaining[0]}/${rem.remaining[1]} remaining<br/>requires 3 sol && 10 Naked Meerkatz`;
 };
 
 const getRecipeYields = async (
@@ -1443,7 +1443,7 @@ setState(state)*/
           disabled={disabled}
           onClick={onCraft(recipe)}
         >
-          Craft
+          Burn & Mint
         </Button>
         </span>
       </Tooltip>
